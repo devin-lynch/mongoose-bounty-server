@@ -28,3 +28,7 @@ const BountySchema = new mongoose.Schema({
 }, {
     timestamps: true
 })
+
+// turn the schema into a mongoose model
+// export our mongoose model
+module.exports = mongoose.model('Bounty', BountySchema)
