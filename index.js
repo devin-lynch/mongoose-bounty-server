@@ -16,7 +16,7 @@ app.use(express.json())
 
 // routes/controllers
 app.get('./', (req, res) => {
-    res.json({ message: 'Welcome to the Bounty Hunter Json API' 🤠 })
+    res.json({ message: 'Welcome to the Bounty Hunter Json API 🤠' })
 })
 
 // listen on a port!
