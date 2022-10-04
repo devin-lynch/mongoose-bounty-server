@@ -55,5 +55,18 @@ router.put('/:id', async (req, res) => {
 })
 
 // DELETE /bounty/:id -- destroy a bounty
+router.delete('/:id', async (req, res) => {
+    try {
+        // get the id from the url route parameters
+        // delete that thang with that id
+        await db.Bounty.findByIdAndDelete(req.params.id)
+        // status 204 -- no content (we cannot send any json data back with this status)
+        // you could also send the deleted item back or you could redirect to GET /bounty to see all the bounties
+        res.sendStatus(204)
+    } catch(err) {
+        console.warn(err)
+        res.status(500).json({ message: 'internal server error' })            
+    }
+})
 
 module.exports = router
