@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 
 // routes/controllers
-app.get('./', (req, res) => {
+app.get('/', (req, res) => {
     res.json({ message: 'Welcome to the Bounty Hunter Json API 🤠' })
 })
 
